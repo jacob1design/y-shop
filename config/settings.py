@@ -134,4 +134,4 @@ LOGIN_REDIRECT_URL = '/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 ALLOWED_HOSTS = ['mercijacob1.pythonanywhere.com',  '127.0.0.1']
-STATIC_ROOT = '/home/olivier3rukera/y-shop-staotic'
+STATIC_ROOT = '/home/mercijacob1/y-shop-staotic'
