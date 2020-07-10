@@ -1,0 +1,38 @@
+.products_scroll_container {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.products_grid_container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px;
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+}
+
+.border_grey {
+    border: 2px solid #eee;
+}
+
+.product_scroll_container {
+    width: 250px;
+}
+
+.product_grid_container {
+    width: 200px;
+}
+
+.img_container {
+    overflow: hidden;
+    max-height: 150px;
+    max-width: 150px;
+}
+
+#img_small_container {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 50px;
+    width: 50px;
+}

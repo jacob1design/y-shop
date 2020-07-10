@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div>
+        <h1 class="h4">Categorie 1</h1>
+        <div class="products_scroll_container">
+            {% for product in products %}
+            <div href="{% url 'product-detail' product.uuid %}" class="border_grey product_scroll_container">
+
+                <div class="img_container"><img src="{{product.cover.url}}" alt=""></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="pt-2">
+        <h1 class="h4">Categorie 2</h1>
+        <div class="products_grid_container">
+            {% for product in products %}
+            <div class="product_grid_container">
+                <a href="{% url 'product-detail' product.uuid %}">
+                    <div style="width: 180px; height:180px;" class="img_container">
+                        <img class="img-fluid" src="{{product.cover.url}}" alt="">
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="pt-2">
+        <h1 class="h4">Categorie 3</h1>
+        <div class="products_list_container">
+            {% for product in products %}
+            <a href="{% url 'product-detail' product.uuid %}">
+                <div class="d-flex pt-2 border_grey">
+
+                    <div>
+                        <div style="width: 100px; height:100px;">
+                            <img class="img-fluid" src="{{product.cover.url}}" alt="">
+                        </div>
+
+
+                    </div>
+                    <div class="d-flex flex-column justify-content-center pl-1">
+                        <h1 class="h4 text-dark">{{product.name}}</h1>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+{% endblock content %}

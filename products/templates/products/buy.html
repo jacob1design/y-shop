@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+    <div>
+        <span>{{product.name}}</span>
+        <span>{{product.price}} $</span>
+        
+    </div>
+    <form action="{% url 'buy-product' product.uuid %}" method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" value="Acheter" class="btn btn-primary btn-block">
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div>
+        <div class="d-flex justify-content-center pt-2">
+            <img src="{{product.cover.url}}" alt="" class="img-fluid">
+        </div>
+        <h1 class="h5 text-center pt-3">{{product.name}}</h1>
+        <span class="text-danger">{{product.price}}</span>
+        <div>
+            <p>
+                {{product.description}}
+            </p>
+            <div class="pb-3">
+                <a href="{% url 'buy-product' product.uuid %}" class="btn btn-primary btn-block">Acheter</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
